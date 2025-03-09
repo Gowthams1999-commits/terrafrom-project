@@ -1,4 +1,4 @@
-# terrafrom-project
+# terrafrom-project-Gowtham
 
 ## What is Terraform?
 Terraform is an open-source Infrastructure as Code (IaC) tool developed by HashiCorp. It allows you to define, provision, and manage infrastructure using a declarative configuration language called HashiCorp Configuration Language (HCL).
