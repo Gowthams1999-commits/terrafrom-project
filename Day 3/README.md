@@ -1,6 +1,6 @@
 # Modules in terraform.
 
-Modules: write configuration file again and again. we can use module to create a resources in any cloud provider ( AWS or Azure or GCP ). We can pass values as perametor in modules instead of touching you logical code. your local code is created in different path.
+Modules: Instead of writing configuration files repeatedly, we can use modules to create resources in any cloud provider (AWS, Azure, or GCP). We can pass values as parameters into the modules, allowing us to avoid modifying the core logic of the code. The module code is stored in a different path, separate from your main configuration
 
 ## Key Benefits of Using Modules in Terraform:
 
