@@ -1,39 +1,39 @@
-## VPC CReation using terform
+# VPC Creation using Terraform
+## Step 1: Create a VPC
+Define the VPC using a CIDR block (e.g., 10.0.0.0/16).
+Required Items:
+CIDR Block: 10.0.0.0/16
 
-Step 1. Need to create VPC using CIDR block ( 10.0.0.0/16)
-Step 2. Create a public and private subnet for your VPC to deploy Ec2 instance
+## Step 2: Create Public and Private Subnets
+Create public and private subnets within your VPC to deploy EC2 instances.
+Required Items for Subnets:
+VPC ID
+CIDR Blocks (e.g., 10.0.1.0/24 for public and 10.0.2.0/24 for private)
+Availability Zones (AZs)
+Tags
 
-required itmes for subnet
+## Step 3: Create an Internet Gateway
+Create an Internet Gateway (IGW) and attach it to your VPC to allow internet access.
+Required Items:
+VPC ID
+Tags
 
-* VPC ID
-* CIDR blocks
-* AV ( Avilabilty zones )
-* Tags
+## Step 4: Create a Route Table
+Create a route table for routing traffic to subnets, including routes for internet access.
+Required Items:
+VPC ID
+Route (e.g., Destination = "0.0.0.0/0", Target = "internet-gw")
+Tags
 
-Step 3 . Create a internet gw
+## Step 5: Associate Route Table with Subnets
+Associate the route table with both public and private subnets.
+Required Items:
+Route Table ID
+Subnet ID for both public and private subnets
 
-required items:
-
-* VPC ID
-* Tags
-
-Step 4. Create route table for routing traffic to subnets and add routes also ( target = "0.0.0.0/0", source = "internet-gw")
-
-required items:
-* VPC ID
-* Route
-* Tags
-
-Step 5 . Associate route table with public and private subnet
-
-required items:
-* Route table ID
-* subnet ID for public and private
-
-  Step 6. Create security group for your Ec2 instance and add inboud and outboud rules
-  * VPC ID
-  * Ingress (Inbound rule)
-  * egress (Outbound rule)
- 
-    
-
+## Step 6: Create Security Group for EC2 Instance
+Create a security group for your EC2 instance, adding inbound and outbound rules.
+Required Items:
+VPC ID
+Inbound Rule (Ingress): (e.g., allow SSH/HTTP)
+Outbound Rule (Egress): (e.g., allow all traffic or restrict as needed)
