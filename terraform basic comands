@@ -1,0 +1,53 @@
+🔧 terraform init
+Purpose: Initializes a new or existing Terraform configuration.
+
+Downloads necessary provider plugins.
+
+Sets up the .terraform directory.
+
+Must be run before most other commands.
+
+✅ Use it first when starting a new project.
+
+🔍 terraform plan
+Purpose: Creates an execution plan.
+
+Shows what Terraform will do without actually making any changes.
+
+Helps you preview what will happen before applying.
+
+✅ Use it to review changes before applying them.
+
+🚀 terraform apply
+Purpose: Applies the changes required to reach the desired state.
+
+Executes the plan created by terraform plan.
+
+Will prompt you to confirm before applying (unless you use -auto-approve).
+
+✅ Use it to actually deploy infrastructure.
+
+🧹 terraform fmt
+Purpose: Formats Terraform code.
+
+Automatically formats .tf files to the standard style.
+
+Keeps code clean and consistent.
+
+✅ Use it for clean, readable code.
+
+✅ terraform validate
+Purpose: Validates the syntax and configuration of your Terraform files.
+
+Ensures the configuration is syntactically correct.
+
+Doesn’t check if the infrastructure can be successfully applied—just that it's valid.
+
+✅ Use it to catch errors early in your code.
+
+💣 terraform destroy
+Purpose: Destroys the Terraform-managed infrastructure.
+
+Removes all resources defined in your configuration.
+
+Prompts for confirmation before deletion (unless using -auto-approve).
