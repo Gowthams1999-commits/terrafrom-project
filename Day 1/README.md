@@ -1,3 +1,10 @@
+# What is Terraform?
+Terraform is an open-source Infrastructure as Code (IaC) tool developed by HashiCorp. It allows you to define, provision, and manage infrastructure using a declarative configuration language called HashiCorp Configuration Language (HCL).
+
+In simpler terms, Terraform helps you automate and manage your cloud infrastructure (such as servers, networks, and databases) by writing code instead of manually configuring it via a user interface.
+
+You can use Terraform to interact with different cloud providers (AWS, Azure, GCP, etc.), on-premises infrastructure, and even third-party services (like DNS or monitoring tools) via a plugin-based architecture.
+
 ## Terraform installation:
 
 Follow Terraform official documention to install terraform
