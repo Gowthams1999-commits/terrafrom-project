@@ -19,3 +19,16 @@ Follow AWS decumentation to install AWS CLI and Configure AWS CLI to access aws 
 4. Subnet ID ( Deploy my Ec2 instance in inside VPC )
 
 5. Security Group ( Need to create and allow required inbound & Outbound access )
+
+## What is veriable in teraform.
+
+Variable is use to store values and pass values in coniguration file of terraform template when required.
+
+to Create a variable you can create a file called variable.tf and define below arguments.
+
+1. description
+2. Type
+3. default
+
+
+
