@@ -10,6 +10,6 @@
 
 ## Day 5 --> Remote Backend
 
-## Day 6 -- Terraform Workspace
+## Day 6 --> Terraform Workspace
 
 
