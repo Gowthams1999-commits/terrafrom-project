@@ -36,3 +36,4 @@ terraform workspace show
 3. terraform validate	Checks whether your configuration is syntactically valid.
 4. terraform plan	Shows a preview of changes that will be applied. A dry run.
 5. terraform apply	Applies the changes to reach the desired state (creates/modifies/destroys resources).
+6. terraform apply --var-file=<file name> Pass variable file while run apply command
