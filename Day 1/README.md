@@ -35,7 +35,44 @@ terraform state list --> list resources in terraform state file
 
 terraform output --> list output values
 
+🔹 What is a terraform Block?
+
+The terraform block is a special top-level block in a Terraform configuration.
+It defines settings that control how Terraform itself behaves, such as:
+
+Which Terraform version is required
+
+Which provider plugins to use
+
+Where to store the state (backend configuration)
+
+It is not about resources (like EC2, S3, etc.), but about Terraform itself.
 terraform state rm <resource> --> remove specify resources
+
+Example :
+
+terraform {
+  required_version = ">= 1.3.0"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=3.45.0"
+    }
+  }
+
+  backend "s3" {
+    bucket = "my-terraform-state"
+    key    = "prod/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
+
+Note: Only constents only store in terraform block. Resources,input and output variable not allowed in terraform block
 ### Below are required components to create resource ( infrastructure )
 
 1. ami ( Amazon Image )
