@@ -15,6 +15,27 @@ Follow AWS decumentation to install AWS CLI and Configure AWS CLI to access aws 
 
 ## Create EC2 instance using terrform.
 
+**⚡ Summary (Most Commonly Used in Daily Work)
+
+terraform init → initialize
+
+terraform fmt → format code
+
+terraform validate → check syntax
+
+terraform plan → preview changes
+
+terraform apply → create/update resources
+
+terraform destroy → delete resources**
+
+terraform show -> show terraform.tfstate in human readable format
+
+terraform state list --> list resources in terraform state file
+
+terraform output --> list output values
+
+terraform state rm <resource> --> remove specify resources
 ### Below are required components to create resource ( infrastructure )
 
 1. ami ( Amazon Image )
