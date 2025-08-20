@@ -30,24 +30,40 @@ You are switching from local → remote backend.
 
 Or moving from one remote backend → another.
 
-🔹 2. -reconfigure
+🔹 2. terraform init -reconfigure
 
-👉 Purpose: Ignores previous backend settings and forces Terraform to reinitialize the backend from scratch.
+👉 Meaning: Forget old backend settings and use the new ones, but don’t move state.
 
-Does NOT automatically migrate state.
+Example:
 
-Useful if backend config changed and Terraform is confused (e.g., changed bucket name, region, or authentication).
+You already use an S3 backend:
 
-Terraform will forget old settings and use the new backend settings as if it’s the first time.
+backend "s3" {
+  bucket = "my-terraform-state"
+  key    = "prod/terraform.tfstate"
+  region = "us-east-1"
+}
 
-✅ Use when:
 
-You want to reset backend configuration.
+Now, you change bucket name or region:
 
-You changed backend settings (like new bucket name or resource group).
+backend "s3" {
+  bucket = "new-terraform-state"
+  key    = "prod/terraform.tfstate"
+  region = "us-east-1"
+}
 
-You want Terraform to “forget” old backend without migrating state.
 
+Run:
+
+terraform init -reconfigure
+
+
+Terraform will reinitialize backend with the new config.
+
+It does not move old state automatically (you must handle that if needed).
+
+✅ Use when backend configuration changed (like new bucket, credentials, or reg
 
 The terraform.tfstate file is crucial in Terraform as it stores the current state of your infrastructure. This file contains information about your resources, their attributes, and metadata. Terraform uses this state file to manage your infrastructure and track changes between the desired state (as defined in your Terraform configuration) and the current state (as it exists in the real world).
 
